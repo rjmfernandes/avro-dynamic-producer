@@ -1,0 +1,245 @@
+{
+  "fields": [
+    {
+      "name": "header",
+      "type": {
+        "fields": [
+          {
+            "name": "header_type",
+            "type": "double"
+          },
+          {
+            "name": "header_identifier",
+            "type": "string"
+          },
+          {
+            "name": "header_date",
+            "type": {
+              "logicalType": "timestamp-micros",
+              "type": "long"
+            }
+          },
+          {
+            "name": "header_time",
+            "type": {
+              "logicalType": "time-micros",
+              "type": "long"
+            }
+          },
+          {
+            "name": "header_table_owner",
+            "type": "string"
+          },
+          {
+            "name": "header_table_name",
+            "type": "string"
+          },
+          {
+            "name": "header_operation",
+            "type": "string"
+          },
+          {
+            "name": "header_transaction_identifier",
+            "type": "string"
+          },
+          {
+            "name": "header_commit_lrsn",
+            "type": "string"
+          },
+          {
+            "name": "header_commit_time",
+            "type": {
+              "logicalType": "timestamp-micros",
+              "type": "long"
+            }
+          },
+          {
+            "name": "header_plan_name",
+            "type": "string"
+          },
+          {
+            "name": "header_segment_number",
+            "type": "double"
+          }
+        ],
+        "name": "Header",
+        "namespace": "es.comp.cdc.common",
+        "type": "record"
+      }
+    },
+    {
+      "name": "timestamps",
+      "type": {
+        "fields": [
+          {
+            "default": 0,
+            "name": "ts_host",
+            "type": "long"
+          },
+          {
+            "default": 0,
+            "name": "ts_ai",
+            "type": "long"
+          },
+          {
+            "default": 0,
+            "name": "ts_kafka",
+            "type": "long"
+          }
+        ],
+        "name": "Timestamps",
+        "namespace": "es.comp.cdc.common",
+        "type": "record"
+      }
+    },
+    {
+      "default": null,
+      "name": "before",
+      "type": [
+        "null",
+        {
+          "fields": [
+            {
+              "name": "o01_idempr",
+              "type": "string"
+            },
+            {
+              "name": "o01_idcent",
+              "type": "string"
+            },
+            {
+              "name": "o01_termbto",
+              "type": "string"
+            },
+            {
+              "name": "o01_numdgo",
+              "type": "int"
+            },
+            {
+              "name": "o01_agrupcod",
+              "type": "string"
+            },
+            {
+              "name": "o01_agrupcos",
+              "type": "string"
+            },
+            {
+              "name": "o01_aplic",
+              "type": "string"
+            },
+            {
+              "name": "o01_codopbas",
+              "type": "string"
+            },
+            {
+              "name": "o01_codopban",
+              "type": "string"
+            },
+            {
+              "name": "o01_sitoper",
+              "type": "string"
+            },
+            {
+              "name": "o01_sitopera",
+              "type": "string"
+            },
+            {
+              "name": "o01_impopban",
+              "type": {
+                "logicalType": "decimal",
+                "precision": 18,
+                "scale": 2,
+                "type": "bytes"
+              }
+            },
+            {
+              "name": "o01_moneda",
+              "type": "string"
+            },
+            {
+              "name": "o01_fecoper",
+              "type": {
+                "logicalType": "date",
+                "type": "int"
+              }
+            },
+            {
+              "name": "o01_objeto",
+              "type": "string"
+            },
+            {
+              "name": "o01_idemprp",
+              "type": "string"
+            },
+            {
+              "name": "o01_idcentp",
+              "type": "string"
+            },
+            {
+              "name": "o01_idprodp",
+              "type": "string"
+            },
+            {
+              "name": "o01_idcontrp",
+              "type": "string"
+            },
+            {
+              "name": "o01_idstipro",
+              "type": "string"
+            },
+            {
+              "name": "o01_idemprc",
+              "type": "string"
+            },
+            {
+              "name": "o01_idcentc",
+              "type": "string"
+            },
+            {
+              "name": "o01_idemprd",
+              "type": "string"
+            },
+            {
+              "name": "o01_idcentd",
+              "type": "string"
+            },
+            {
+              "name": "o01_usuari",
+              "type": "string"
+            },
+            {
+              "name": "o01_timejecu",
+              "type": {
+                "logicalType": "timestamp-micros",
+                "type": "long"
+              }
+            },
+            {
+              "name": "o01_falso_ind",
+              "type": "string"
+            },
+            {
+              "name": "o01_atribdgo",
+              "type": "bytes"
+            }
+          ],
+          "name": "ObDgoContab1",
+          "namespace": "es.comp.cdc.data",
+          "type": "record"
+        }
+      ]
+    },
+    {
+      "default": null,
+      "name": "after",
+      "type": [
+        "null",
+        "es.comp.cdc.data.ObDgoContab1"
+      ]
+    }
+  ],
+  "name": "ObDgoContab1Event",
+  "namespace": "es.comp.cdc.event",
+  "type": "record",
+  "version": "1"
+}

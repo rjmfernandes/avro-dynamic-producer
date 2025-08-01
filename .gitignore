@@ -1,0 +1,8 @@
+.DS_Store
+.vscode
+.idea
+
+
+KafkaAvroUtils/.idea
+KafkaAvroUtils/target
+KafkaAvroUtils/src/main/java/SANES
