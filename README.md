@@ -37,6 +37,8 @@ mvn install
 cd ..
 ```
 
+If you need change the producer.properties as per your environment and the schema account.avsc as well.
+
 Create topic test-topic:
 
 ```shell
@@ -48,8 +50,6 @@ Register the schema:
 ```shell
 curl -X POST -H "Content-Type:application/json" --data "`jq '. | {schema: tojson}' account.avsc`" http://localhost:8081/subjects/test-topic-value/versions
 ```
-
-If you need change the producer.properties as per your environment and the schema account.avsc as well.
 
 Run our producer (notice that you can run multiple times this in different shells to increase parallel load):
 
